@@ -53,6 +53,7 @@ public class Main {
         String amountStr = scanner.nextLine().trim();
         //Because our balance is in Double
         //Wrapper class
+        if (amountStr.isBlank()) amountStr ="0";
         Double initial = Double.valueOf(amountStr);
 
         String accountNumber = bankService.openAccount(name, email, type);
